@@ -1,0 +1,16 @@
+{
+    "files": [
+        "qtmTODMath.py",
+        "dlgQtMSettings.py",
+        "qtmeter.ui",
+        "README.md",
+        "qtmAudioRxThread.py",
+        "qtmSettings.ui",
+        "qtmeter.py",
+        "dlgQtMeter.py",
+        "qtmSettings.py",
+        "Contributers.md",
+        "CODE_OF_CONDUCT.md",
+        "COPYING"
+    ]
+}

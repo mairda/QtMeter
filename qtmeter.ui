@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtMeter</class>
+ <widget class="QDialog" name="QtMeter">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>622</width>
+    <height>552</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Qt Audio Meter</string>
+  </property>
+  <property name="whatsThis">
+   <string extracomment="This file is part of QtMeter and has the same license as QtMeter.py"/>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>492</x>
+     <y>510</y>
+     <width>120</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="dBMeter">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>602</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>When audio is started will update every &lt;Meter Update Period&gt; showing the audio level of &lt;Sample Window&gt; of data from the default input device in self-relative dB</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="minimum">
+    <number>-90</number>
+   </property>
+   <property name="maximum">
+    <number>0</number>
+   </property>
+   <property name="value">
+    <number>-87</number>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbStartStop">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>516</y>
+     <width>87</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Push to start sampling audio and updating the meter</string>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>594</x>
+     <y>10</y>
+     <width>18</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>dB</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>609</x>
+     <y>49</y>
+     <width>4</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>|</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>589</x>
+     <y>49</y>
+     <width>4</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>|</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>607</x>
+     <y>67</y>
+     <width>10</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>583</x>
+     <y>67</y>
+     <width>15</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-3</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>49</y>
+     <width>4</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>|</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>569</x>
+     <y>49</y>
+     <width>4</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>|</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>563</x>
+     <y>67</y>
+     <width>16</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-6</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>549</x>
+     <y>49</y>
+     <width>4</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>|</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>543</x>
+     <y>67</y>
+     <width>16</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-9</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>509</x>
+     <y>49</y>
+     <width>4</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>|</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>67</y>
+     <width>21</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-15</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>469</x>
+     <y>49</y>
+     <width>4</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>|</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_14">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>67</y>
+     <width>21</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-21</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_15">
+   <property name="geometry">
+    <rect>
+     <x>428</x>
+     <y>49</y>
+     <width>4</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>|</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_16">
+   <property name="geometry">
+    <rect>
+     <x>419</x>
+     <y>67</y>
+     <width>23</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-27</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_17">
+   <property name="geometry">
+    <rect>
+     <x>368</x>
+     <y>49</y>
+     <width>4</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>|</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_18">
+   <property name="geometry">
+    <rect>
+     <x>358</x>
+     <y>67</y>
+     <width>24</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-36</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_19">
+   <property name="geometry">
+    <rect>
+     <x>308</x>
+     <y>49</y>
+     <width>4</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>|</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_20">
+   <property name="geometry">
+    <rect>
+     <x>298</x>
+     <y>67</y>
+     <width>24</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-45</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_21">
+   <property name="geometry">
+    <rect>
+     <x>248</x>
+     <y>49</y>
+     <width>4</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>|</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_22">
+   <property name="geometry">
+    <rect>
+     <x>238</x>
+     <y>67</y>
+     <width>24</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-54</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_23">
+   <property name="geometry">
+    <rect>
+     <x>168</x>
+     <y>49</y>
+     <width>4</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>|</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_24">
+   <property name="geometry">
+    <rect>
+     <x>158</x>
+     <y>67</y>
+     <width>24</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-66</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_25">
+   <property name="geometry">
+    <rect>
+     <x>87</x>
+     <y>49</y>
+     <width>4</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>|</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_26">
+   <property name="geometry">
+    <rect>
+     <x>78</x>
+     <y>67</y>
+     <width>23</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-78</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_27">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>124</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Meter Frame Rate:</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="dsbUpdatePeriod">
+   <property name="geometry">
+    <rect>
+     <x>233</x>
+     <y>95</y>
+     <width>65</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Set the update period for the meter control in seconds. This period is not guaranteed, especially at lower values.</string>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="minimum">
+    <double>0.010000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>1.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.010000000000000</double>
+   </property>
+   <property name="value">
+    <double>0.033000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_28">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>100</y>
+     <width>7</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>s</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_29">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>132</y>
+     <width>113</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sample Window:</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="dsbSampleWindow">
+   <property name="geometry">
+    <rect>
+     <x>125</x>
+     <y>127</y>
+     <width>67</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>The duration of audio sample data to show the signal level for</string>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="minimum">
+    <double>0.005000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>1.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.005000000000000</double>
+   </property>
+   <property name="value">
+    <double>0.050000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_30">
+   <property name="geometry">
+    <rect>
+     <x>194</x>
+     <y>132</y>
+     <width>7</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>s</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_31">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>163</y>
+     <width>88</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sample Rate:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cbSampleHz">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>159</y>
+     <width>85</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Select an audio data sample rate (some listed rates will not be supported by some audio devices)</string>
+   </property>
+   <property name="currentIndex">
+    <number>5</number>
+   </property>
+   <item>
+    <property name="text">
+     <string>8000</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>11025</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>16000</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>22050</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>32000</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>44100</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>48000</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>88200</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>96000</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>192000</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_32">
+   <property name="geometry">
+    <rect>
+     <x>187</x>
+     <y>163</y>
+     <width>18</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Hz</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_33">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>191</y>
+     <width>84</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sample Size:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cbSampleSize">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>187</y>
+     <width>79</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <item>
+    <property name="text">
+     <string>8-bit</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>16-bit</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>24-bit</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>32-bit</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>32-bit Float</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QSpinBox" name="sbFramesPerSecond">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>136</x>
+     <y>95</y>
+     <width>52</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Set the update frequency for the meter control in Hz. This rate is not guaranteed, especially at higher values.</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frame">
+    <bool>true</bool>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>100</number>
+   </property>
+   <property name="value">
+    <number>30</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_34">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>100</y>
+     <width>18</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Hz</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_35">
+   <property name="geometry">
+    <rect>
+     <x>213</x>
+     <y>100</y>
+     <width>15</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>or</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="cbAutoWindow">
+   <property name="geometry">
+    <rect>
+     <x>211</x>
+     <y>130</y>
+     <width>170</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Let the application choose a sample window based on the update period/frequency</string>
+   </property>
+   <property name="text">
+    <string>Choose automatically</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="gvHistory">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>225</y>
+     <width>542</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>The background shows color representing the sky through the day. Long term meter levels are shown where they occurred during the day.</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbSettings">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>488</y>
+     <width>87</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Click to view and change the application settings</string>
+   </property>
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_36">
+   <property name="geometry">
+    <rect>
+     <x>62</x>
+     <y>259</y>
+     <width>8</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>_</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_37">
+   <property name="geometry">
+    <rect>
+     <x>62</x>
+     <y>209</y>
+     <width>8</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>_</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_38">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>237</y>
+     <width>18</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>dB</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="gbChannels">
+   <property name="geometry">
+    <rect>
+     <x>215</x>
+     <y>159</y>
+     <width>155</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Channels</string>
+   </property>
+   <widget class="QRadioButton" name="rbMono">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>28</y>
+      <width>64</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Select to monitor a single channel (mono) input</string>
+    </property>
+    <property name="text">
+     <string>Mono</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rbStereo">
+    <property name="geometry">
+     <rect>
+      <x>76</x>
+      <y>28</y>
+      <width>69</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Select to monitor a two channel (stereo) input</string>
+    </property>
+    <property name="text">
+     <string>Stereo</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="gbAbs">
+   <property name="geometry">
+    <rect>
+     <x>116</x>
+     <y>479</y>
+     <width>184</width>
+     <height>55</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Absolute (dB):</string>
+   </property>
+   <widget class="QLabel" name="lblAbsMin">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>79</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Min:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblAbsMax">
+    <property name="geometry">
+     <rect>
+      <x>91</x>
+      <y>30</y>
+      <width>79</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Max:</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="tbResetAbs">
+    <property name="geometry">
+     <rect>
+      <x>158</x>
+      <y>0</y>
+      <width>26</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Click to reset the absolute min/max and start fresh tracking of them</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+    <property name="icon">
+     <iconset theme="start-here-symbolic"/>
+    </property>
+    <property name="arrowType">
+     <enum>Qt::NoArrow</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGraphicsView" name="gvSpecHistory">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>275</y>
+     <width>542</width>
+     <height>202</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The audio spectrum observed through the day over a background with color representing the sky through the day. At any time a vertical line of pixels is the spectrum. &amp;quot;Relative&amp;quot; signal strength at each frequency is shown. Low to high relative strength in low to high transparency. Because relative strength is used then at quiet times there is actually less transparency across the whole vertical line for that time, but also little difference between any two pixels in the line. If there is regularly very high signal strength at any vertical positions it can obscure other part of the spectrum. Create an audio filter using the Spectrum tab of the Settings dialog to help. Power ratio probably works best when there is little variation in power between frequencies, dB probably works best when there are few strong signals that don't vary much in frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblSpecMinF">
+   <property name="geometry">
+    <rect>
+     <x>54</x>
+     <y>271</y>
+     <width>16</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0  </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_43">
+   <property name="geometry">
+    <rect>
+     <x>62</x>
+     <y>460</y>
+     <width>8</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="text">
+    <string>_</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::PlainText</enum>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_39">
+   <property name="geometry">
+    <rect>
+     <x>34</x>
+     <y>348</y>
+     <width>36</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>f (Hz)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_40">
+   <property name="geometry">
+    <rect>
+     <x>62</x>
+     <y>253</y>
+     <width>8</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>_</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_41">
+   <property name="geometry">
+    <rect>
+     <x>54</x>
+     <y>221</y>
+     <width>10</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_42">
+   <property name="geometry">
+    <rect>
+     <x>39</x>
+     <y>255</y>
+     <width>25</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-90</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblSpecMaxF">
+   <property name="geometry">
+    <rect>
+     <x>39</x>
+     <y>462</y>
+     <width>24</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>16k</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="gbSpectrumRatio">
+   <property name="geometry">
+    <rect>
+     <x>8</x>
+     <y>376</y>
+     <width>61</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="toolTip">
+    <string>Choose whether to show the spectrum view based on power level or dB</string>
+   </property>
+   <property name="title">
+    <string>Ratios:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <widget class="QRadioButton" name="rbSpectrumRatiodB">
+    <property name="geometry">
+     <rect>
+      <x>2</x>
+      <y>16</y>
+      <width>45</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>dB</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rbSpectrumRatioPower">
+    <property name="geometry">
+     <rect>
+      <x>2</x>
+      <y>39</y>
+      <width>65</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Power</string>
+    </property>
+   </widget>
+  </widget>
+  <zorder>gbSpectrumRatio</zorder>
+  <zorder>label_36</zorder>
+  <zorder>label_43</zorder>
+  <zorder>label_37</zorder>
+  <zorder>label_40</zorder>
+  <zorder>buttonBox</zorder>
+  <zorder>dBMeter</zorder>
+  <zorder>pbStartStop</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_7</zorder>
+  <zorder>label_8</zorder>
+  <zorder>label_9</zorder>
+  <zorder>label_10</zorder>
+  <zorder>label_11</zorder>
+  <zorder>label_12</zorder>
+  <zorder>label_13</zorder>
+  <zorder>label_14</zorder>
+  <zorder>label_15</zorder>
+  <zorder>label_16</zorder>
+  <zorder>label_17</zorder>
+  <zorder>label_18</zorder>
+  <zorder>label_19</zorder>
+  <zorder>label_20</zorder>
+  <zorder>label_21</zorder>
+  <zorder>label_22</zorder>
+  <zorder>label_23</zorder>
+  <zorder>label_24</zorder>
+  <zorder>label_25</zorder>
+  <zorder>label_26</zorder>
+  <zorder>label_27</zorder>
+  <zorder>dsbUpdatePeriod</zorder>
+  <zorder>label_28</zorder>
+  <zorder>label_29</zorder>
+  <zorder>dsbSampleWindow</zorder>
+  <zorder>label_30</zorder>
+  <zorder>label_31</zorder>
+  <zorder>cbSampleHz</zorder>
+  <zorder>label_32</zorder>
+  <zorder>label_33</zorder>
+  <zorder>cbSampleSize</zorder>
+  <zorder>sbFramesPerSecond</zorder>
+  <zorder>label_34</zorder>
+  <zorder>label_35</zorder>
+  <zorder>cbAutoWindow</zorder>
+  <zorder>gvHistory</zorder>
+  <zorder>pbSettings</zorder>
+  <zorder>label_38</zorder>
+  <zorder>gbChannels</zorder>
+  <zorder>gbAbs</zorder>
+  <zorder>gvSpecHistory</zorder>
+  <zorder>lblSpecMinF</zorder>
+  <zorder>label_39</zorder>
+  <zorder>label_41</zorder>
+  <zorder>label_42</zorder>
+  <zorder>lblSpecMaxF</zorder>
+ </widget>
+ <tabstops>
+  <tabstop>pbStartStop</tabstop>
+  <tabstop>pbSettings</tabstop>
+  <tabstop>sbFramesPerSecond</tabstop>
+  <tabstop>dsbUpdatePeriod</tabstop>
+  <tabstop>dsbSampleWindow</tabstop>
+  <tabstop>cbAutoWindow</tabstop>
+  <tabstop>cbSampleHz</tabstop>
+  <tabstop>cbSampleSize</tabstop>
+  <tabstop>rbMono</tabstop>
+  <tabstop>rbStereo</tabstop>
+  <tabstop>gvHistory</tabstop>
+  <tabstop>tbResetAbs</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>QtMeter</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>QtMeter</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
