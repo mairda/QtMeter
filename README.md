@@ -42,8 +42,11 @@ python 3.11 program in the created directory with qtmeter.py as an argument,
 e.g.:
 
 > mkdir /home/myuser/QtMeter
+> 
 > cp Download/*py /home/myuser/QtMeter/
+>
 > cd /home/myuser/QtMeter
+>
 > python3.11 ./qtmeter.py
 
 Use the settings to specify your latitude and longitude so that the long-term
